@@ -1,19 +1,46 @@
+/* =========================
+   VISION LIBRE
+   Charte crème & sobre
+   ========================= */
+
+:root {
+    --cream: #f5f0e8;
+    --cream-light: #faf8f3;
+    --card: #fffdf8;
+    --brown: #29251f;
+    --brown-soft: #625b50;
+    --border: #ddd5c8;
+    --accent: #9b6750;
+}
+
+/* =========================
+   Base
+   ========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-    color: #222;
+    background: var(--cream);
+    color: var(--brown);
     line-height: 1.7;
 }
 
+/* =========================
+   Header
+   ========================= */
+
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #ddd;
-    padding: 55px 20px;
+    background: var(--cream-light);
+    border-bottom: 1px solid var(--border);
+    padding: 45px 20px;
 }
 
 .header-content {
@@ -29,10 +56,14 @@ header h1 {
 }
 
 header p {
-    margin: 5px 0 0;
-    color: #666;
+    margin: 6px 0 0;
+    color: var(--brown-soft);
     font-size: 18px;
 }
+
+/* =========================
+   Contenu
+   ========================= */
 
 main {
     max-width: 1000px;
@@ -41,16 +72,20 @@ main {
 }
 
 section {
-    background: #ffffff;
+    background: var(--card);
     padding: 40px;
     margin-bottom: 30px;
-    border: 1px solid #ddd;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
 }
 
 h2 {
     margin-top: 0;
+    margin-bottom: 20px;
     font-size: 30px;
     font-weight: 600;
+    line-height: 1.3;
 }
 
 h3 {
@@ -58,24 +93,51 @@ h3 {
     font-size: 21px;
 }
 
+p {
+    margin: 12px 0;
+}
+
+/* =========================
+   Introduction
+   ========================= */
+
 .intro {
     font-size: 17px;
 }
+
+.intro p:last-child {
+    color: var(--brown-soft);
+}
+
+/* =========================
+   Carte profil
+   ========================= */
 
 .profile-card {
     display: flex;
     gap: 30px;
     align-items: center;
+
+    padding: 25px;
+
+    background: var(--cream-light);
+    border: 1px solid var(--border);
+    border-radius: 14px;
 }
 
 .profile-placeholder {
     width: 180px;
     height: 180px;
-    background: #e9e9e9;
+
+    background: #e9e1d4;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #777;
+
+    color: var(--brown-soft);
+    border-radius: 12px;
+
     flex-shrink: 0;
 }
 
@@ -84,7 +146,10 @@ h3 {
 }
 
 .profile-info a {
-    color: #222;
+    display: inline-block;
+    margin-top: 10px;
+
+    color: var(--accent);
     font-weight: 600;
     text-decoration: none;
 }
@@ -93,34 +158,65 @@ h3 {
     text-decoration: underline;
 }
 
+/* =========================
+   Principes
+   ========================= */
+
 .principles-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
 }
 
 .principles-grid div {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+    padding: 25px;
+
+    background: var(--cream-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
 
+.principles-grid h3 {
+    margin-bottom: 8px;
+}
+
+.principles-grid p {
+    margin: 0;
+    color: var(--brown-soft);
+}
+
+/* =========================
+   Footer
+   ========================= */
+
 footer {
+    margin-top: 60px;
+
     text-align: center;
     padding: 35px 20px;
-    color: #777;
-    font-size: 14px;
-    border-top: 1px solid #ddd;
-    background: #ffffff;
+
+    color: var(--brown-soft);
+
+    border-top: 1px solid var(--border);
+    background: var(--cream-light);
 }
+
+/* =========================
+   Responsive téléphone
+   ========================= */
 
 @media (max-width: 650px) {
 
     header {
-        padding: 40px 20px;
+        padding: 35px 20px;
     }
 
     header h1 {
         font-size: 36px;
+    }
+
+    header p {
+        font-size: 16px;
     }
 
     main {
@@ -130,11 +226,16 @@ footer {
 
     section {
         padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    h2 {
+        font-size: 25px;
     }
 
     .profile-card {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
     .profile-placeholder {
@@ -144,6 +245,6 @@ footer {
 
     .principles-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
     }
 }
