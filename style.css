@@ -34,6 +34,10 @@ body {
     line-height: 1.7;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -57,6 +61,10 @@ header p {
     color: var(--text-soft);
     font-size: 17px;
 }
+
+/* =========================
+   CONTENU
+========================= */
 
 main {
     max-width: 1000px;
@@ -99,17 +107,34 @@ p {
     color: var(--text-soft);
 }
 
-/* Carte profil */
+/* =========================
+   CARTES PROFILS
+========================= */
 
 .profile-card {
     display: flex;
     gap: 30px;
     align-items: center;
     padding: 25px;
+
     background: var(--surface-soft);
     border: 1px solid var(--border);
     border-radius: 16px;
 }
+
+/* Image dans les cartes */
+
+.profile-card .profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Ancien emplacement photo,
+   conservé au cas où */
 
 .profile-placeholder {
     width: 180px;
@@ -144,7 +169,101 @@ p {
     text-decoration: underline;
 }
 
-/* Principes */
+/* =========================
+   PAGE PROFIL
+========================= */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.profile-header .profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin-bottom: 5px;
+}
+
+.profile-role {
+    color: var(--text-soft);
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.quick-info {
+    margin-top: 20px;
+    padding: 18px 20px;
+
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.quick-info p {
+    margin: 5px 0;
+}
+
+/* =========================
+   CHRONOLOGIE
+========================= */
+
+.timeline {
+    position: relative;
+    margin-top: 25px;
+    padding-left: 30px;
+    border-left: 2px solid var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -39px;
+    top: 6px;
+
+    width: 14px;
+    height: 14px;
+
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.timeline-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent);
+}
+
+.timeline-item p {
+    margin: 0;
+    color: var(--text-soft);
+}
+
+/* =========================
+   PRINCIPES
+========================= */
 
 .principles-grid {
     display: grid;
@@ -170,7 +289,9 @@ p {
     color: var(--text-soft);
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     margin-top: 60px;
@@ -185,7 +306,9 @@ footer {
     background: var(--surface);
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 650px) {
 
@@ -215,34 +338,37 @@ footer {
         font-size: 25px;
     }
 
+    /* Cartes */
+
     .profile-card {
         flex-direction: column;
         align-items: stretch;
     }
 
+    .profile-card .profile-photo,
     .profile-placeholder {
         width: 100%;
         height: 220px;
     }
 
-    .profile-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 14px;
-    flex-shrink: 0;
-    display: block;
-}
+    /* Profil Houria */
+
+    .profile-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .profile-header .profile-photo {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Principes */
+
     .principles-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-}
-.profile-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 14px;
-    flex-shrink: 0;
-    display: block;
+
 }
