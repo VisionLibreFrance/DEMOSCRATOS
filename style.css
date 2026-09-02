@@ -444,6 +444,26 @@ footer p {
     .sources {
         padding: 20px;
     }
+
+ /* =========================================================
+   SECTIONS DES FICHES
+   ========================================================= */
+
+.profile-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 30px;
+    margin-bottom: 40px;
+
+    box-shadow: var(--shadow);
+}
+
+.profile-section h2 {
+    margin-top: 0;
+}  
+   
 .justified-text {
     text-align: justify;
 
