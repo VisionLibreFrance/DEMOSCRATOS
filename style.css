@@ -444,7 +444,23 @@ footer p {
     .sources {
         padding: 20px;
     }
-}
 .justified-text {
     text-align: justify;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+}
+
+.justified-text p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.justified-text p:last-child {
+    margin-bottom: 0;
 }
