@@ -225,6 +225,14 @@ footer {
         height: 220px;
     }
 
+    .profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: block;
+}
     .principles-grid {
         grid-template-columns: 1fr;
         gap: 15px;
