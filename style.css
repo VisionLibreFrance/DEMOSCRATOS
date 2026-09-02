@@ -1,16 +1,13 @@
 :root {
-    --cream: #f5f0e8;
-    --cream-light: #faf8f3;
-    --card: #fffdf8;
-    --brown: #29251f;
-    --brown-soft: #625b50;
-    --border: #ddd5c8;
-    --accent: #9b6750;
+    --background: #f7f8fa;
+    --surface: #ffffff;
+    --surface-soft: #f1f4f7;
+    --text: #20252b;
+    --text-soft: #66717d;
+    --border: #e2e7ec;
+    --accent: #315d7d;
+    --accent-soft: #e8f0f5;
 }
-
-/* =========================
-   Base
-   ========================= */
 
 * {
     box-sizing: border-box;
@@ -22,20 +19,25 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--cream);
-    color: var(--brown);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
     line-height: 1.7;
 }
 
-/* =========================
-   Header
-   ========================= */
-
 header {
-    background: var(--cream-light);
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
-    padding: 45px 20px;
+    padding: 42px 20px;
 }
 
 .header-content {
@@ -45,20 +47,16 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 46px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 44px;
+    font-weight: 650;
+    letter-spacing: -1px;
 }
 
 header p {
-    margin: 6px 0 0;
-    color: var(--brown-soft);
-    font-size: 18px;
+    margin: 5px 0 0;
+    color: var(--text-soft);
+    font-size: 17px;
 }
-
-/* =========================
-   Contenu
-   ========================= */
 
 main {
     max-width: 1000px;
@@ -67,72 +65,65 @@ main {
 }
 
 section {
-    background: var(--card);
+    background: var(--surface);
     padding: 40px;
-    margin-bottom: 30px;
-
+    margin-bottom: 28px;
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 18px;
 }
 
 h2 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 650;
     line-height: 1.3;
+    letter-spacing: -0.5px;
 }
 
 h3 {
     margin-top: 0;
     font-size: 21px;
+    font-weight: 650;
 }
 
 p {
     margin: 12px 0;
 }
 
-/* =========================
-   Introduction
-   ========================= */
-
 .intro {
     font-size: 17px;
 }
 
 .intro p:last-child {
-    color: var(--brown-soft);
+    color: var(--text-soft);
 }
 
-/* =========================
-   Carte profil
-   ========================= */
+/* Carte profil */
 
 .profile-card {
     display: flex;
     gap: 30px;
     align-items: center;
-
     padding: 25px;
-
-    background: var(--cream-light);
+    background: var(--surface-soft);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
 }
 
 .profile-placeholder {
     width: 180px;
     height: 180px;
 
-    background: #e9e1d4;
+    background: #e4e9ee;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: var(--brown-soft);
-    border-radius: 12px;
+    color: var(--text-soft);
 
+    border-radius: 14px;
     flex-shrink: 0;
 }
 
@@ -145,7 +136,7 @@ p {
     margin-top: 10px;
 
     color: var(--accent);
-    font-weight: 600;
+    font-weight: 650;
     text-decoration: none;
 }
 
@@ -153,22 +144,21 @@ p {
     text-decoration: underline;
 }
 
-/* =========================
-   Principes
-   ========================= */
+/* Principes */
 
 .principles-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 22px;
 }
 
 .principles-grid div {
     padding: 25px;
 
-    background: var(--cream-light);
+    background: var(--surface-soft);
     border: 1px solid var(--border);
-    border-radius: 12px;
+
+    border-radius: 14px;
 }
 
 .principles-grid h3 {
@@ -177,28 +167,25 @@ p {
 
 .principles-grid p {
     margin: 0;
-    color: var(--brown-soft);
+    color: var(--text-soft);
 }
 
-/* =========================
-   Footer
-   ========================= */
+/* Footer */
 
 footer {
     margin-top: 60px;
 
     text-align: center;
+
     padding: 35px 20px;
 
-    color: var(--brown-soft);
+    color: var(--text-soft);
 
     border-top: 1px solid var(--border);
-    background: var(--cream-light);
+    background: var(--surface);
 }
 
-/* =========================
-   Responsive téléphone
-   ========================= */
+/* Mobile */
 
 @media (max-width: 650px) {
 
@@ -221,7 +208,7 @@ footer {
 
     section {
         padding: 25px 20px;
-        border-radius: 14px;
+        border-radius: 15px;
     }
 
     h2 {
