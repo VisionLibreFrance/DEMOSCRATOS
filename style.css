@@ -241,6 +241,40 @@ a:hover {
     margin-bottom: 4px;
 }
 
+
+/* =========================================================
+   SECTIONS DES FICHES
+   ========================================================= */
+
+.profile-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 30px;
+    margin-bottom: 40px;
+
+    box-shadow: var(--shadow);
+}
+
+.profile-section h2 {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   TEXTE JUSTIFIÉ
+   ========================================================= */
+
+.justified-text {
+    text-align: justify;
+}
+
+.justified-text p {
+    margin-bottom: 20px;
+}
+
+
 /* =========================================================
    SOURCES
    ========================================================= */
@@ -431,34 +465,7 @@ footer p {
         padding: 20px;
     }
 
-/* =========================================================
-   SECTIONS DES FICHES
-   ========================================================= */
-
-.profile-section {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-
-    padding: 30px;
-    margin-bottom: 40px;
-
-    box-shadow: var(--shadow);
-}
-
-.profile-section h2 {
-    margin-top: 0;
-}
-
-
-/* =========================================================
-   TEXTE JUSTIFIÉ
-   ========================================================= */
-
-.justified-text {
-    text-align: justify;
-}
-
-.justified-text p {
-    margin-bottom: 20px;
+    .profile-section {
+        padding: 20px;
+    }
 }
