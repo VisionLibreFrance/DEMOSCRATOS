@@ -238,8 +238,8 @@ a:hover {
 }
 
 .quick-info strong {
-    display: block;
-    margin-bottom: 4px;
+    display: inline;
+    margin-right: 5px;
 }
 
 
