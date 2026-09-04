@@ -104,7 +104,8 @@ section h3 {
 }
 
 .intro p {
-    margin-bottom: 18px;
+   margin-bottom: 18px;
+   text-align: justify;
 }
 
 
