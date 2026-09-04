@@ -1,5 +1,5 @@
 /* =========================================================
-   VISION LIBRE 🇫🇷
+   DEMOSCRATOS
    Feuille de style principale
    ========================================================= */
 
@@ -53,7 +53,7 @@ header {
 }
 
 .header-content {
-    max-width: 1060px;
+    max-width: 1100px;
     margin: 0 auto;
 
     display: flex;
@@ -68,6 +68,7 @@ header {
 .logo {
     width: 90px;
     height: auto;
+    display: block;
 }
 
 header h1 {
@@ -117,8 +118,8 @@ section h3 {
 }
 
 .intro p {
-   margin-bottom: 18px;
-   text-align: justify;
+    margin-bottom: 18px;
+    text-align: justify;
 }
 
 
@@ -242,12 +243,13 @@ a:hover {
     margin-top: 25px;
 }
 
-.quick-info div {
+.quick-info p {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 8px;
 
     padding: 15px;
+    margin: 0;
 }
 
 .quick-info strong {
@@ -431,8 +433,16 @@ footer p {
         padding: 25px 20px;
     }
 
+    .header-content {
+        max-width: 100%;
+    }
+
     header h1 {
         font-size: 1.8rem;
+    }
+
+    .logo {
+        width: 70px;
     }
 
     main {
